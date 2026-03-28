@@ -61,7 +61,7 @@ function recalculate() {
 // INSERT YOUR CODE HERE
 let modelButton = document.getElementById("model-button");
 modelButton.addEventListener("click", changeModel);
-function changeModel(modelName){
+function changeModel(){
   let textModel = document.getElementById("model-text");
   if (modelName === "XYZ"){
     modelName = "CPRG"
