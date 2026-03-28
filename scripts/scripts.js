@@ -1,4 +1,4 @@
-/****************** YOUR NAME: 
+/****************** YOUR NAME: Ioanne Gueco
 
 The instructions describe the missing logic that is needed; you will translate these into JavaScript in the places indicated.
 
@@ -28,14 +28,17 @@ let duration = 1
 
 // INSERT YOUR CODE HERE
 function recalculate() {
-  let costly = document.getElementById("calculated-cost");
+  let costLabel = document.getElementById("calculated-cost");
+
+  let costly = 0;
+
   if (modelName === "XYZ"){
     costly = duration * 100
   }
-  else(modelName === "CPRG"); {
+  else {
     costly = duration * 213
   }
-  return costly;
+  costLabel.innerHTML = costly;
 }
 
 
@@ -61,13 +64,14 @@ modelButton.addEventListener("click", changeModel);
 function changeModel(modelName){
   let textModel = document.getElementById("model-text");
   if (modelName === "XYZ"){
-    let modelName = "CPRG"
-    let textModel = document.getElementById("model-text").textContent = "Model CPRG"
+    modelName = "CPRG"
+    textModel.textContent = "Model CPRG"
   }  
-  else(modelName === "CPRG");{
-    let modelName = "XYZ"
-    let textModel = document.getElementById("model-text").textContent = "Model XYZ" 
+  else{
+    modelName = "XYZ"
+    textModel.textContent = "Model XYZ" 
   }
+
 }
 
 
@@ -83,16 +87,18 @@ function changeModel(modelName){
         - change the innerHTML of the duration-text span element to this new value
         - recalculate() the total cost/
     - finally, attach this function to the "Change Duration" pseudo-button, so it runs whenever the button is clicked.
-    // Dura_Change.addEventListener("click", changeDuration);
+     
     */
 
 // INSERT YOUR CODE HERE
 let Dura_Change = document.getElementById("duration-button");
+Dura_Change.addEventListener("click", changeDuration);
 
 function changeDuration(){
   let Dura_text = document.getElementById("duration-text");
   let new_dura = prompt("Set new duration: ")
-  Dura_text = document.getElementById("duration-text").textContent = new_dura;
+  duration = Number(new_dura);
+  Dura_text.textContent = new_dura;
   recalculate()
 }
 
