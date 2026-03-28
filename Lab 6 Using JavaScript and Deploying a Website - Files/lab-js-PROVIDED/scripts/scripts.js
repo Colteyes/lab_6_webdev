@@ -29,10 +29,10 @@ let duration = 1
 // INSERT YOUR CODE HERE
 function recalculate() {
   let costly = document.getElementById("calculated-cost");
-  if (modelName === "Model XYZ"){
+  if (modelName === "XYZ"){
     costly = duration * 100
   }
-  else(modelName === "Model CPRG"); {
+  else(modelName === "CPRG"); {
     costly = duration * 213
   }
   return costly;
@@ -92,7 +92,8 @@ let Dura_Change = document.getElementById("duration-button");
 function changeDuration(){
   let Dura_text = document.getElementById("duration-text");
   let new_dura = prompt("Set new duration: ")
-  
+  Dura_text = document.getElementById("duration-text").textContent = new_dura;
+  recalculate()
 }
 
 
