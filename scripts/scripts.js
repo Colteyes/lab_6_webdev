@@ -71,7 +71,7 @@ function changeModel(modelName){
     modelName = "XYZ"
     textModel.textContent = "Model XYZ" 
   }
-
+  recalculate();
 }
 
 
