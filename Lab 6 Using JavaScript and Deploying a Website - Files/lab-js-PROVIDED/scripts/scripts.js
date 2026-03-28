@@ -11,8 +11,8 @@ You are encouraged to use the provided naming convention for ease of review.
 
 // INSERT YOUR CODE HERE
 
-const modelName = document.getElementById;
-const duration = document.getElementById;
+const modelName = document.getElementById("model-text");
+const duration = document.getElementById("duration-text");
 
 
 
