@@ -46,7 +46,7 @@ const duration = document.getElementById("duration-text");
     // modelButton.addEventListener("click", changeModel);
 
 // INSERT YOUR CODE HERE
-
+const Switch_Up = document.getElementById("model-button");
 
 
 
@@ -65,6 +65,6 @@ const duration = document.getElementById("duration-text");
 */
 
 // INSERT YOUR CODE HERE
-
+const Dura_Change = document.getElementById("duration-button");
 
 
