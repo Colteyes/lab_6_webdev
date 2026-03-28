@@ -11,8 +11,8 @@ You are encouraged to use the provided naming convention for ease of review.
 
 // INSERT YOUR CODE HERE
 
-const modelName = document.getElementById("model-text");
-const duration = document.getElementById("duration-text");
+let modelName = "XYZ"
+let duration = 1
 
 
 
@@ -27,7 +27,16 @@ const duration = document.getElementById("duration-text");
 */
 
 // INSERT YOUR CODE HERE
-
+function recalculate() {
+  let costly = document.getElementById("calculated-cost");
+  if (modelName === "Model XYZ"){
+    costly = duration * 100
+  }
+  else(modelName === "Model CPRG"); {
+    costly = duration * 213
+  }
+  return costly;
+}
 
 
 
@@ -43,11 +52,23 @@ const duration = document.getElementById("duration-text");
     - if modelName is currently "CPRG", change the value of modelName to "XYZ", and change the innerHTML of the model-text span element to "Model XYZ"
     - then, recalculate() the total cost.
 - finally, uncomment the following line of JavaScript to have this function run automatically whenever the pseudo-button is clicked: */
-    // modelButton.addEventListener("click", changeModel);
+
+
 
 // INSERT YOUR CODE HERE
-const Switch_Up = document.getElementById("model-button");
-
+let modelButton = document.getElementById("model-button");
+modelButton.addEventListener("click", changeModel);
+function changeModel(modelName){
+  let textModel = document.getElementById("model-text");
+  if (modelName === "XYZ"){
+    let modelName = "CPRG"
+    let textModel = document.getElementById("model-text").textContent = "Model CPRG"
+  }  
+  else(modelName === "CPRG");{
+    let modelName = "XYZ"
+    let textModel = document.getElementById("model-text").textContent = "Model XYZ" 
+  }
+}
 
 
 
@@ -62,9 +83,17 @@ const Switch_Up = document.getElementById("model-button");
         - change the innerHTML of the duration-text span element to this new value
         - recalculate() the total cost/
     - finally, attach this function to the "Change Duration" pseudo-button, so it runs whenever the button is clicked.
-*/
+    // Dura_Change.addEventListener("click", changeDuration);
+    */
 
 // INSERT YOUR CODE HERE
-const Dura_Change = document.getElementById("duration-button");
+let Dura_Change = document.getElementById("duration-button");
+
+function changeDuration(){
+  let Dura_text = document.getElementById("duration-text");
+  let new_dura = prompt("Set new duration: ")
+  
+}
+
 
 
