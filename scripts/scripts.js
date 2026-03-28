@@ -11,8 +11,8 @@ You are encouraged to use the provided naming convention for ease of review.
 
 // INSERT YOUR CODE HERE
 
-let modelName = "XYZ"
-let duration = 1
+let modelName = "XYZ";
+let duration = 1;
 
 
 
@@ -33,10 +33,10 @@ function recalculate() {
   let costly = 0;
 
   if (modelName === "XYZ"){
-    costly = duration * 100
+    costly = duration * 100;
   }
   else {
-    costly = duration * 213
+    costly = duration * 213;
   }
   costLabel.innerHTML = costly;
 }
@@ -64,12 +64,12 @@ modelButton.addEventListener("click", changeModel);
 function changeModel(){
   let textModel = document.getElementById("model-text");
   if (modelName === "XYZ"){
-    modelName = "CPRG"
-    textModel.textContent = "Model CPRG"
+    modelName = "CPRG";
+    textModel.textContent = "Model CPRG";
   }  
   else{
-    modelName = "XYZ"
-    textModel.textContent = "Model XYZ" 
+    modelName = "XYZ";
+    textModel.textContent = "Model XYZ"; 
   }
   recalculate();
 }
@@ -96,10 +96,10 @@ Dura_Change.addEventListener("click", changeDuration);
 
 function changeDuration(){
   let Dura_text = document.getElementById("duration-text");
-  let new_dura = prompt("Set new duration: ")
+  let new_dura = prompt("Set new duration: ");
   duration = Number(new_dura);
   Dura_text.textContent = new_dura;
-  recalculate()
+  recalculate();
 }
 
 
